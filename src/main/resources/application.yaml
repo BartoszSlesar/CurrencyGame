@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SpringCurrencyGame
+  main:
+    web-application-type: none
+
+currency-game:
+  currency-api-key: ${API_KEY}
+
+caching:
+  spring:
+    currencyData: 3600000

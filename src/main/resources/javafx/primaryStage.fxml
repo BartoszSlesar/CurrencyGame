@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bard.springcurrencygame.controllers.PrimaryStageController"
+            prefHeight="400" prefWidth="400">
+    <stylesheets>
+        <URL value="@static.css/darkTheme.css" />
+    </stylesheets>
+    <top>
+        <HBox alignment="CENTER" spacing="5" >
+            <padding>
+                <Insets top="30" bottom="10" left="20" right="20"/>
+            </padding>
+            <Button fx:id="startButton" text="Start" onAction="#startGame"/>
+            <Button fx:id="restartButton" text="Restart" onAction="#restartGame"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox  spacing="5" >
+            <Label fx:id="startGameLabel" text="Naciśnij start by rozpocząć" />
+            <TextArea fx:id="currencyTextField" prefWidth="200" prefHeight="200" editable="false" wrapText="true"/>
+            <TextField fx:id="answerTextField" promptText="wprowadz kwote" onKeyPressed="#guessAnswer"/>
+            <padding>
+                <Insets top="10" bottom="10" left="20" right="20"/>
+            </padding>
+        </VBox>
+    </center>
+
+</BorderPane>
